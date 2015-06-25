@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+		<title>Новоклиник</title>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+		<script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
+		<script type="text/javascript" src="js/scripts.js"></script>
+		<script type="text/javascript" src="js/jquery.maskedinput-1.3.min.js"></script>
+		<script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
+		<script type="text/javascript" src="js/parallax.js"></script>
+		<script type="text/javascript" src="js/SmoothScroll.js"></script>
+		<script type="text/javascript" src="js/navigation.js"></script>
+		<script type="text/javascript" src="js/fancybox/jquery.fancybox.js"></script>
+		<link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" />
+		<link rel="stylesheet" href="bootstrap/bootstrap-grid-3.3.2.min.css" />
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/fonts.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="http://office.ldgn.ru/script/statscript/"></script><script src="http://office.ldgn.ru/script/actscript/"></script>
+		<!-- Yandex.Metrika counter -->
+		<script type="text/javascript">
+		(function (d, w, c) {
+		(w[c] = w[c] || []).push(function() {
+		try {
+		w.yaCounter30539462 = new Ya.Metrika({id:30539462,
+		webvisor:true,
+		clickmap:true,
+		trackLinks:true,
+		accurateTrackBounce:true});
+		} catch(e) { }
+		});
+		var n = d.getElementsByTagName("script")[0],
+		s = d.createElement("script"),
+		f = function () { n.parentNode.insertBefore(s, n); };
+		s.type = "text/javascript";
+		s.async = true;
+		s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+		if (w.opera == "[object Opera]") {
+		d.addEventListener("DOMContentLoaded", f, false);
+		} else { f(); }
+		})(document, window, "yandex_metrika_callbacks");
+		</script>
+		<noscript><div><img src="//mc.yandex.ru/watch/30539462" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+		<!-- /Yandex.Metrika counter -->
+	</head>
+	<body>
+		<p class="msgs">
+		</p>
+		<div id="lechenie" class="modal callback">
+			<div class="modal-box">
+				<div class="modal-title">
+					Запись на Лазерный липолиз
+					<span>Заполните форму и мы вам обязательно перезвоним!</span>
+				</div>
+				<form class"LIstat-form LIstat-form-ajax" action='request.php' method='POST'' name='form class"LIstat-form LIstat-form-ajax"'>
+					<input type="text" name="name" value=""  class="input_name" data-placeholder="ваше имя" />
+					<input type="text" name="phone" required  value="" class="input_phone" placeholder="ваш телефон" />
+					<input type="hidden" name="clickid" value="<? echo $_GET["id_click"];?>" />
+					<input class="bttn" name="submit2" type="submit" value="Заказать звонок" />
+				</form class"LIstat-form LIstat-form-ajax">
+			</div>
+		</div>
+		<div id="otbelivanie" class="modal callback">
+			<div class="modal-box">
+				<div class="modal-title">
+					Запись на Инфрокрасную сауну
+					<span>Заполните форму и мы вам обязательно перезвоним!</span>
+				</div>
+				<form class"LIstat-form LIstat-form-ajax" action='request.php' method='POST'' name='form class"LIstat-form LIstat-form-ajax"'>
+					<input type="text" name="name" value=""  class="input_name" data-placeholder="ваше имя" />
+					<input type="text" name="phone" required  value="" class="input_phone" placeholder="ваш телефон" />
+					<input type="hidden" name="clickid" value="<? echo $_GET["id_click"];?>" />
+					<input class="bttn" name="submit2" type="submit" value="Заказать звонок" />
+				</form class"LIstat-form LIstat-form-ajax">
+			</div>
+		</div>
+		<div id="callback" class="modal callback">
+			<div class="modal-box">
+				<div class="modal-title">
+					Заказать звонок
+					<span>Заполните форму и мы вам обязательно перезвоним!</span>
+				</div>
+				<form class"LIstat-form LIstat-form-ajax" action='request.php' method='POST'' name='form class"LIstat-form LIstat-form-ajax"'>
+					<input type="text" name="name" value=""  class="input_name" data-placeholder="ваше имя" />
+					<input type="text" name="phone" required  value="" class="input_phone" placeholder="ваш телефон" />
+					<input type="hidden" name="clickid" value="<? echo $_GET["id_click"];?>" />
+					<input class="bttn" name="submit2" type="submit" value="Заказать звонок" />
+				</form class"LIstat-form LIstat-form-ajax">
+			</div>
+		</div>
+		<div id="makeorder" class="modal makeorder">
+			<div class="modal-box">
+				<div class="modal-title">
+					Оставить заявку
+					<span>Заполните форму и мы обязательно свяжемся с вами!</span>
+				</div>
+				<form class"LIstat-form LIstat-form-ajax" action='request.php' method='POST'' name='form class"LIstat-form LIstat-form-ajax"'>
+					<input type="hidden" name="service" class="service" value="Обратный звонок" />
+					<input type="text" name="name" value=""  class="input_name" data-placeholder="ваше имя" />
+					<input type="text" name="phone" required  value="" class="input_phone" placeholder="ваш телефон" />
+					<input type="hidden" name="clickid" value="<? echo $_GET["id_click"];?>">
+					<input class="bttn" name="submit" type="submit" value="Оставить заявку" />
+				</form class"LIstat-form LIstat-form-ajax">
+			</div>
+		</div>
+		<div id="question" class="modal question">
+			<div class="modal-box">
+				<div class="modal-title">
+					Задать вопрос
+					<span>Заполните форму и мы обязательно свяжемся с вами!</span>
+				</div>
+				<form class"LIstat-form LIstat-form-ajax" action='request.php' method='POST'' name='form class"LIstat-form LIstat-form-ajax"'>
+					<div class="form class"LIstat-form LIstat-form-ajax"_left">
+						<input type="hidden" name="service" class="service" value="Задать вопрос специалисту" />
+						<input type="text" name="name" value=""  class="input_name" data-placeholder="ваше имя" />
+						<input type="text" name="phone" required  value="" class="input_phone" placeholder="ваш телефон" />
+						<input type="hidden" name="clickid" value="<? echo $_GET["id_click"];?>">
+					</div>
+					<div class="form class"LIstat-form LIstat-form-ajax"_right">
+						<textarea name="mess" data-placeholder="ваш вопрос" ></textarea>
+					</div>
+					<div class="clear"></div>
+					<input class="bttn" name="submit4" type="submit" value="Задать вопрос" />
+				</form class"LIstat-form LIstat-form-ajax">
+			</div>
+		</div>
+		<div id="politika" class="modal callback">
+			<div class="modal-box">
+				<div class="modal-title">
+					Политика конфиденциальности
+				</div>
+				<div style="width:620px; height:320px; overflow-y:scroll;">
+					<p>Данная Политика Конфиденциальности применима ко всей личной информации и полученными или использованными данными на настоящем сайте и всех сайтах, на которые ссылается настоящий сайт.</p>
+					<h3>Сбор вашей личной информации</h3>
+					<p>Мы храним и обрабатываем предоставленную Вами информацию с тем уровнем достаточной защиты, которая представляется достаточной и доступной. Мы не передает предоставленную информацию третьим лицами за исключением случаев, предусмотренных законодательством Российской Федерации.</p>
+					<p>Мы можем попросить Вас предоставить контактную информацию, такую, как адрес электронной почты, ФИО, номер телефона, ссылки на аккаунты в социальных сетях или прочих контактов, необходимых для осуществления наших услуг.</p>
+					<p>Отказ от предоставления данной информации является достаточным условием для отказа или прекращения оказания всех или части наших услуг. Для Вашего удобства эти данные могут быть получены в автоматическом режиме с уведомлением Вас перед отправкой запроса на его получение.</p>
+					<p>Мы можем объединять информацию, предоставленную Вами на нашем сайте, с другой информацией, полученной нами от Вас вне рамок сайта или от сторонних лиц для более эффективной работы нашего сайта, услуг или наших предложений.</p>
+					<p>Если Вы предоставляете нам свою информацию, Вы имеете право, предварительно уведомив нас, проверить, изменить, исправить или удалить эту информацию.</p>
+					<p>Мы оставляем за собой право выбора способа и метода проверки предоставленной Вами информации. Проверка производится в рамках действующего законодательства той страны, в пределах которой Вы воспользовались нашими услугами.</p>
+					<p>Заполняя наши электронные формы, анкеты, передавая нам информацию иными способами, Вы соглашаетесь с нашей политикой конфиденциальности.</p>
+					<h3>Использование вашей личной информации</h3>
+					<p>Мы используем Вашу личную информацию исключительно для предоставления Вам услуг и сервисов, указанных на нашем сайте.</p>
+					<p>В частности, мы используем Вашу информацию, чтобы связаться с вами удобным для вас способом, для предоставления услуг и поддержки, передачи полезных материалов, технической информации и т.д.</p>
+					<p>Мы также можем связаться с Вами для предоставления информации о товарах, услугах, рекламе, конкурсах и других мероприятиях или предложениях представляющих для Вас интерес. Вы имеете право решить и уведомить нас, хотите ли вы получать такую информацию, с помощью запроса по электронной почте или по иным каналам связи, указанных на нашем сайте.</p>
+					<h3>Передача вашей личной информации</h3>
+					<p>Мы обязуемся не передавать вашу личную информацию другим лицам за исключением случаев, когда Вы запросите товары или услуги, выполнение которых требует обращение к нашим партнерам или подрядчикам, с вашим предварительным согласием на передачу такой информации.</p>
+					<p>Мы сотрудничаем со сторонними компаниями для предоставления услуг и поставки товаров, услуг и решений для наших клиентов; наши партнеры, подрядчики и поставщики услуг берут обязательства хранить конфиденциальность информации, полученной от нашего имени и не использовать ее для каких-либо иных целей, кроме предоставления услуг для наших клиентов.</p>
+					<p>Мы обязуемся не передавать Вашу личную информацию, предоставленную Вами, сторонним лицам, за исключением: вашего согласия; ответа на официальный и юридически правильно оформленный запрос правительственных органов; следования нормам законодательства, акта, повестки в суд или судебного решения; помощи в предотвращении мошенничества, защите прав и имущества нашей компании; защиты личной безопасности или имущества наших сотрудников, пользователей или общественности; обработки Вашего заказа или запроса, или обработки нашего счета-фактуры; передачи лицам или компаниям, которых мы нанимаем для выполнения внутренних операций компании.</p>
+					<h3>Безопасность вашей личной информации</h3>
+					<p>Мы гарантируем защиту информации, которую Вы нам предоставляете. Хотя мы не может гарантировать отсутствие попыток несанкционированного доступа, Вы все равно можете быть уверены, что мы прилагаем</p>
+					
+					<p>максимум усилий для защиты Вашей личной информации и предотвращения несанкционированного доступа к ней с помощью соответствующих технологий и внутренних процедур.</p>
+					<h3>Согласие на обработку данных</h3>
+					<p>Предоставляя любые личные данные на нашем сайте, все наши клиенты четко понимают, что это необходимо для должного уровня обеспечения нами заявленных услуг и/или сервиса и безусловно соглашаются на сбор и обработку такой информации в рамках данной Политики конфиденциальности.</p>
+					<p>Вы имеете право в любой момент отказаться от наших услуг и удалить ваши данные из нашей базы однако мы оставляем за собой право хранить введенную вами контактную и прочую информацию в архивах для сбора статистики и улучшения качества наших сервисов и услуг.</p>
+				</div>
+			</div>
+		</div>
+		<nav>
+			<div class="menu">
+				<div class="wrap">
+					<div class="menu_div1"></div>
+					<div class="menu_list">
+						<a href="#whats">Почему мы</a>
+						<a href="#hww">Схема работы</a>
+						<a href="#projects">О нас</a>
+						<a href="#reviews">Отзывы</a>
+						<a href="#contacts">Контакты</a>
+					</div>
+					<div class="menu_div2"></div>
+				</div>
+			</div>
+			<div class="menu_a"><a href="#"></a></div>
+		</nav>
+		<div class="page">
+			<header>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-5">
+							<div class="bg_girl">
+							</div>
+						</div>
+						<div class="col-md-7">
+							<div class="logo"></div>
+							<!-- <div class="phone">
+											<a id="go" rel="leanModal" name="callback" href="#callback" class="mc">Перезвонить Вам?</a>
+							</div> -->
+							<div class="wrap_text">
+								<h2>Коррекция</h2>
+								<h1>фигуры и веса</h1>
+								<p>Где в Москве найти лучших специалистов</br>по похудению и коррекции веса</br><span>и получить скидку до 50%?</span></p>
+							</div>
+						</div>
+						<div class="main-contain">
+							<div class="wrap_go">
+								<div class="wr_go1 mc">
+									<p><span>скидка 85%</span> на Лазерный липолиз</p>
+									<a id="go1" rel="leanModal" name="lechenie" href="#lechenie">Успейте воспользоваться</a>
+								</div>
+								<div class="wr_go2 mc">
+									<p><span>скидка 75%</span> на Инфрокрасную сауну</p>
+									<a id="go2" rel="leanModal" name="lechenie" href="#otbelivanie">Успейте воспользоваться</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- <div class="parallax">
+							<ul id="scene" class="scene">
+									<li class="layer l2" data-depth="-0.20"><img src="images/par2.png" /></li>
+									<li class="layer l3" data-depth="0.40"><img src="images/par3.png" /></li>
+									<li class="layer l4" data-depth="0.30"><img src="images/par4.png" /></li>
+									<li class="layer l5" data-depth="-0.60"><img src="images/par5.png" /></li>
+									<li class="layer l6" data-depth="0.60"><img src="images/par6.png" /></li>
+									<li class="layer l7" data-depth="0.30"><img src="images/par7.png" /></li>
+							</ul>
+					</div> -->
+				</div>
+			</header>
+			<section class="order ordr">
+				<div class="wrap">
+					<div class="timer_block">
+						<div class="timer_img"></div>
+						<span>Оставьте заявку прямо сейчас</span>
+						и получите скидку <b>от 20 до 50 % </b> на услуги по <br /><b>похудению и коррекции веса</b> в нашей Клинике!
+						<div class="clear"></div>
+						<div class="clear"></div>
+						<div class="left">до конца акции:</div>
+						<div class="timer">
+							<div class="container_time">
+								<div class="days">
+									<span class="flip day1Play">0</span>
+									<span class="flip dayPlay">0</span>
+								</div>
+								<div class="hours">
+									<span class="flip hour2Play"></span>
+									<span class="flip hourPlay"></span>
+								</div>
+								<div class="minutes">
+									<span class="flip minute6Play"></span>
+									<span class="flip minutePlay"></span>
+								</div>
+								<div class="seconds">
+									<span class="flip second6Play"></span>
+									<span class="flip secondPlay"></span>
+								</div>
+							</div>
+						</div>
+						<div class="arrow">&nbsp;</div>
+					</div>
+					<div class="order_block">
+						<span>Записаться на <br>бесплатный прием к специалисту</span>
+						<form class"LIstat-form LIstat-form-ajax" action='request.php' method='POST'' name='form class"LIstat-form LIstat-form-ajax"'>
+							<input type="hidden" name="service" class="service" value="Бесплатный первичный прием" />
+							<input type="text" name="name" value=""  class="input_name" data-placeholder="ваше имя" />
+							<input type="text" name="phone" required  value="" class="input_phone" placeholder="ваш телефон" required />
+							<input type="text" name="email" value="" class="input_email" data-placeholder="Ваш вопрос" />
+							<input type="hidden" name="clickid" value="<? echo $_GET["id_click"];?>">
+							<input class="bttn" name="submit" type="submit" value="Оставить заявку" />
+						</form class"LIstat-form LIstat-form-ajax">
+						
+					</div>
+				</div>
+			</section>
+			
+			<div id="slide2"><div class="slide-pd" id="reasons">
+				<!-- <div class="servants scroll">
+												<div class="serv scroll scaleIn"><em class="scroll fadeIn">15</em><span>лет</span><br>успешной <br>работы<br></div>
+												<div class="serv scroll scaleIn"><span>Более</span><em class="scroll fadeIn">25000</em>вылеченых <br>зубов</div>
+												<div class="serv scroll scaleIn"><span>Более</span><em class="scroll fadeIn">15000</em>довольных <br>пациентов</div>
+				</div> -->
+				<section class="pluses" id="whats">
+					<div class="wrap">
+						<div class="container">
+							<div class="row">
+								<h2>
+								<span>Почему выбирают нас?</span>
+								</h2>
+								<div class="col-md-6">
+									<div class="pluses_img"></div>
+								</div>
+								<div class="col-md-6">
+									<div class="pluses_block">
+										<div class="p1a scroll-animate">
+											<div class="plus">
+												<div class="plus_nmbr"><img src="images/icon_result.png" /></div>
+												<div class="plus_text">
+													<span>Гарантированный результат</span>
+													Наши уникальные методики снижения веса позволяют нам дать 100% гарантию достижения целевого веса.
+												</div>
+												<div class="clear"></div>
+											</div>
+										</div>
+										<div class="p2a scroll-animate">
+											<div class="plus">
+												<div class="plus_nmbr"><img src="images/icon_proff.png" /></div>
+												<div class="plus_text">
+													<span>Высочайшие профессионалы</span>
+													У нас работают врачи I-ой категории, кандидаты медицинских наук, профессиональные косметологи.
+												</div>
+												<div class="clear"></div>
+											</div>
+										</div>
+										<div class="p3a scroll-animate">
+											<div class="plus">
+												<div class="plus_nmbr"><img src="images/icon_price.png" /></div>
+												<div class="plus_text">
+													<span>Экономичные цены</span>
+													Мы входим в ТОП-10 самых выгодных клиник Москвы и Московской области.
+												</div>
+												<div class="clear"></div>
+											</div>
+										</div>
+										<div class="p4a scroll-animate">
+											<div class="plus">
+												<div class="plus_nmbr"><img src="images/icon_time.png" /></div>
+												<div class="plus_text">
+													<span>Опыт - более 9 лет</span>
+													Наши уникальные методики снижения веса позволяют нам дать 100% гарантию достижения целевого веса.
+												</div>
+												<div class="clear"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="hww" id="hww">
+					<h2>5 шагов к долгожданному снижению веса</h2>
+					<div class="wrap scroll-animate">
+						<div class="hww_one h1">
+							<p>Заявка.</p>
+							Вы оставляете заявку<br /> на посещение бесплатной<br /> консультации<br /> в нашем центре
+						</div>
+						<div class="hww_one h2">
+							<p>Первичная консультация.</p>
+							Мы звоним вам и согласовываем <br />дату посещения центра.
+						</div>
+						<div class="hww_one h3">
+							<p>Разработка программы.</p>
+							Мы анализируем состав вашего тела,<br /> выявляем причины набора веса и разрабатываем персональную программу похудения
+						</div>
+						<div class="hww_one h4">
+							<p>Прохождение программы.</p>
+							Вы приступаете к программе <br /> активного снижения веса
+						</div>
+						<div class="hww_one h5">
+							<p>Вы под контролем.</p>
+							На протяжении всего периода снижения<br />веса и закрепления достигнутых<br />результатов наши специалисты<br />постоянно будут рядом с вами
+						</div>
+						<div class="car"><h2>У вас остались сомнения?</h2></div>
+					</div>
+				</section>
+				<section class="order">
+					<div class="wrap">
+						<div class="timer_block">
+							<div class="timer_img"></div>
+							<span>Оставьте заявку прямо сейчас</span>
+							и получите скидку <b>от 20 до 50 % </b> на услуги по <br /><b>похудению и коррекции</b> веса в нашей Клинике!
+							<div class="clear"></div>
+							<div class="clear"></div>
+							<div class="left">до конца акции:</div>
+							<div class="timer">
+								<div class="container_time">
+									<div class="days">
+										<span class="flip day1Play">0</span>
+										<span class="flip dayPlay">0</span>
+									</div>
+									<div class="hours">
+										<span class="flip hour2Play"></span>
+										<span class="flip hourPlay"></span>
+									</div>
+									<div class="minutes">
+										<span class="flip minute6Play"></span>
+										<span class="flip minutePlay"></span>
+									</div>
+									<div class="seconds">
+										<span class="flip second6Play"></span>
+										<span class="flip secondPlay"></span>
+									</div>
+								</div>
+							</div>
+							<div class="arrow">&nbsp;</div>
+						</div>
+						<div class="order_block">
+							<span>Записаться на <br>бесплатный прием к специалисту</span>
+							<form class"LIstat-form LIstat-form-ajax" action='request.php' method='POST'' name='form class"LIstat-form LIstat-form-ajax"'>
+								<input type="hidden" name="service" class="service" value="Бесплатный первичный прием" />
+								<input type="text" name="name" value=""  class="input_name" data-placeholder="ваше имя" />
+								<input type="text" name="phone" required  value="" class="input_phone" placeholder="ваш телефон" required />
+								<input type="text" name="email" value="" class="input_email" data-placeholder="Ваш вопрос" />
+								<input type="hidden" name="clickid" value="<? echo $_GET["id_click"];?>">
+								<input class="bttn" name="submit" type="submit" value="Оставить заявку" />
+							</form class"LIstat-form LIstat-form-ajax">
+							
+						</div>
+					</div>
+				</section>
+				
+				
+				<section class="projects" id="projects">
+					<h2>Узнайте подробнее о нас</h2>
+					<div class="wrap scroll-animate">
+						
+					</div>
+				</section>
+				<section class="reviews" id="reviews">
+					<h2>Отзывы наших клиентов</h2>
+					<div class="wrap">
+						<div class="r_col">
+							<div class="review r1">
+								<div class="review_ttl">
+									«Смотрю на свои старые фотографии и понимаю, насколько же я изменилась!»
+								</div>
+								<p>«Мне надо было удалить зуб мудрости. Он постоянно мешал и я прикусывала щеку. </p>
+								<p> Лечить был бесполезно, я решилась на удаление. Обезболили классно, ничего вообще не почувствовала:). </p>
+								<p>Рада, что мне там помогли.»</p>
+								<div class="review_img"></div>
+								<div class="review_name">
+									<span>Светлана, 29 лет</span>
+									г. Москва
+								</div>
+							</div>
+							<div class="review r3">
+								<div class="review_ttl">
+									«Затянула с лечением как это обычно и бывает...»
+								</div>
+								<p>«Сильно болел зуб, дотянулась с лечением. Но теперь зуб пролечен, поставили пломбу, </p>
+								<p>вообще по цвету от зуба не отличить. И на будущее составили план лечения остальных зубов. Теперь как время и средства будут, сразу в стоматологию, чтобы не доводить до боли.</p>
+								<p>Теперь буду рекомендовать знакомым»!</p>
+								<div class="review_img"></div>
+								<div class="review_name">
+									<span>Галина, 32 года</span>
+									г. Москва
+								</div>
+							</div>
+						</div>
+						<div class="r_col">
+							<div class="review r4">
+								<div class="review_ttl">
+									«Теперь улыбаюсь во все 32 зуба!»
+								</div>
+								<p>«Пришел в клинику с большими проблемами, болело все, думал будут удалять, но Ерина Юлия Владимировна решила мои проблемы.</p>
+								<p>Сохранила мне зубы. Большое ей за это СПАСИБО.» </p>
+								<p>Теперь буду пользоваться только услугами этой клиники! Благодарю Вас.</p>
+								<div class="review_img"></div>
+								<div class="review_name">
+									<span>Егор Викторович, 45 лет</span>
+									г. Москва
+								</div>
+							</div>
+							<div class="review r2">
+								<div class="review_ttl">
+									«Два зуба и нет проблем»
+								</div>
+								<p>«Очень понравилась работа хирурга Павла Сергеевича Данилова. </p>
+								<p>Удалял мне 2 зуба мудрости большой сложности. Работа была выполнена с большим профессионализмом. Никаких неприятных ощущений после удаления не было.
+								<br><br>Теперь собираюсь сделать себе отбеливание зубов и знаю куда обратиться!» </p>
+								<div class="review_img"></div>
+								<div class="review_name">
+									<span>Василий, 44 года</span>
+									г. Москва
+								</div>
+							</div>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</section>
+				<section class="order">
+					<div class="wrap">
+						<div class="timer_block">
+							<div class="timer_img"></div>
+							<span>Оставьте заявку прямо сейчас</span>
+							и получите скидку <b>от 20 до 50 % </b> на услуги по <br /><b>похудению и коррекции</b> веса в нашей Клинике!
+							<div class="clear"></div>
+							<div class="clear"></div>
+							<div class="left">до конца акции:</div>
+							<div class="timer">
+								<div class="container_time">
+									<div class="days">
+										<span class="flip day1Play">0</span>
+										<span class="flip dayPlay">0</span>
+									</div>
+									<div class="hours">
+										<span class="flip hour2Play"></span>
+										<span class="flip hourPlay"></span>
+									</div>
+									<div class="minutes">
+										<span class="flip minute6Play"></span>
+										<span class="flip minutePlay"></span>
+									</div>
+									<div class="seconds">
+										<span class="flip second6Play"></span>
+										<span class="flip secondPlay"></span>
+									</div>
+								</div>
+							</div>
+							<div class="arrow">&nbsp;</div>
+						</div>
+						<div class="order_block">
+							<span>Записаться на <br>бесплатный прием к специалисту</span>
+							<form class"LIstat-form LIstat-form-ajax" action='request.php' method='POST'' name='form class"LIstat-form LIstat-form-ajax"'>
+								<input type="hidden" name="service" class="service" value="Бесплатный первичный прием" />
+								<input type="text" name="name" value=""  class="input_name" data-placeholder="ваше имя" />
+								<input type="text" name="phone" required  value="" class="input_phone" placeholder="ваш телефон" required />
+								<input type="text" name="email" value="" class="input_email" data-placeholder="Ваш вопрос" />
+								<input type="hidden" name="clickid" value="<? echo $_GET["id_click"];?>">
+								<input class="bttn" name="submit" type="submit" value="Оставить заявку" />
+							</form class"LIstat-form LIstat-form-ajax">
+							
+						</div>
+					</div>
+				</section>
+				
+				
+				
+				
+				<!--
+				
+				
+				<section class="contacts" id="contacts">
+													<div class="wrap">
+																						<h2>Адреса наших клиник</h2><br>
+																					
+																						<span style="color:#909090; font-size: 16px;">Время работы: пн-пт с 09.00-20.00 cб-вс с 10.00-18.00</span>
+																						
+																				
+																						
+																						<a id="go" rel="leanModal" name="callback" href="#callback" class="mc">Записаться на прием</a>
+																						
+																							<p style="font-size:16px;  margin-top: 20px;">
+																												<b>м. Алтуфьево
+																												</b><br><span class="font-style:italic">(Шенкурский пр-д, дом 11)</span>
+																												<b>м. Аэропорт
+																												</b><br><span class="font-style:italic">(ул. Красноармейская, дом 12)</span>
+																												<b>м. Беляево
+																												</b><br><span class="font-style:italic">(ул. Профсоюзная, дом 104/д)</span>
+																												<b>м. ВДНХ
+																												</b><br><span class="font-style:italic">(ул.Академика Королева, дом 3)</span>
+																												<b>
+																												м. Войковская
+																												</b><br><span class="font-style:italic">(ул. Ленинградское шоссе, дом 21)</span>
+																												<b>м. Крылатское
+																												</b><br><span class="font-style:italic">(Осенний бульвар, дом 12, корп. 10)</span>
+																												<b>м. Люблино
+																												</b><br><span class="font-style:italic">(ул. Новороссийская, дом 28 (200 м от метро)
+																												</span>
+																												<b>м. Митино
+																												</b><br><span class="font-style:italic">(ул. Дубравная, дом 46)</span>
+																												<b>м. Новые Черемушки
+																												</b><br><span class="font-style:italic">(ул. Гарибальди, дом 36)</span>
+																												<b>м. Октябрьское Поле
+																												</b><br><span class="font-style:italic">(ул. Маршала Малиновского, дом 6, корп. 1)</span>
+																												<b>м. Орехово
+																												</b><br><span class="font-style:italic">(ул. Шипиловская дом 1)</span><b>
+																												
+																												м. Первомайская
+																												</b><br><span class="font-style:italic">(ул. 9-я Парковая, дом 8А )</span><b>
+																												
+																												м. Петровско-Разумовская
+																												</b><br><span class="font-style:italic">(Дмитровское шоссе, дом 30/1 (50 м от метро))</span><b>
+																												
+																												м. Пролетарская
+																												</b><br><span class="font-style:italic">(ул. Крутицкий Вал, дом 3)</span><b>
+																												
+																												м. Проспект Вернадского
+																												</b><br><span class="font-style:italic">(Пр-т Вернадского дом 42, корп. 2)</span><b>
+																												
+																												м. Сокольники
+																												</b><br><span class="font-style:italic">(ул. Русаковская, дом 22)</span><b>
+																												
+																												м. Таганская
+																												</b><br><span class="font-style:italic">(ул. Земляной Вал, дом 62, корп. 1)</span><b>
+																												
+																												м. Улица Академика Янгеля
+																												</b><br><span class="font-style:italic">(Варшавское шоссе, 152, корп. 2 )</span><b>
+																												
+																												м. Цветной бульвар
+																												</b><br>
+																												<span class="font-style:italic">
+																												(Малый Сухаревский пер., дом 10)</span>
+																				</p>
+																						
+																						<div class="map">
+																															
+																														<img src="images/metro-map.png">
+																						</div>
+													</div>
+				</section>
+				-->
+				<section class="any_q">
+					<div class="wrap">
+						<h2>Остались вопросы?</h2>
+						<a id="go" rel="leanModal" name="question" href="#question">задать их менеджеру</a>
+						<div class="clear"></div>
+					</div>
+				</section>
+				<footer>
+					<div class="wrap">
+						<a id="go" rel="leanModal" name="callback" href="#politika" class="terms">ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ</a>
+						
+						<div class="clear"></div>
+					</div>
+				</footer>
+			</div>
+			<script src="js/parallax.js"></script>
+		</body>
+	</html>
